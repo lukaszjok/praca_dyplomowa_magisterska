@@ -95,7 +95,23 @@ dr Wojciech \textsc{Kmiecik} % Supervisor's Name
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-\section{Wstęp} % Major section
+\section{Wstęp}
+W swojej pracy chciałbym zaproponować nowy, własny model zarządzania zgłoszeniami ratunkowymi. Aktualny model posiada wiele wad, najpoważniejszą jest fakt, uzależnienia wyboru karetki od jej przynależenia do danej jednostki administracyjnej, nie zawsze jest to optymalny wybór. Przez takie podejście czas oczekiwania na pomoc przez pacjenta wydłuża się. Ponadto, wielokrotnie kierowca, sam decyduje o trasie przejazdu, może wspierać się systemem GPS i nawigacją ale nie ma on pewności, ani wpływu na to czy wybór ten jest optymalny. Decyzja o drodze zostaje podjęta często w chwili, gdy kierowca już prowadzi pojazd, a nie jak intuicyjnie mogłoby wydawać się przed wejściem do karetki przez dedykowany system.
+Celem mojej pracy byłoby zaproponowanie nowego modelu wyboru karetki wysyłanej do zgłoszenia oraz implementacja aplikacji wspomagającej tą czynność. W celu przeprowadzenia badań zaimplementowane zostaną różne algorytmy wyboru trasy, uzależniając jej wybór od stopnia zakorkowania danej trasy. Uzyskane wyniki zostaną ze sobą porównane, by w rezultacie wyłonić ten optymalny.
+\section{Cel pracy}
+W swojej pracy magisterskiej skupię się przedstawieniem problemu dotarcia karetki pogotowia do pacjenta wzywającego pomocy.
+Na początku pracy zostanie przedstawiona aktualna sytuacja w naszym kraju dotycząca systemu ratownictwa oraz pokazane zostanie obecne podejście zagospodarowania i organizacji zespołów ratowniczych. W celu uwiarygodnienia, ale przede wszystkim unaocznieniu poruszanego problemu przytoczone zostaną raporty ministerstwa zdrowia i Najwyższej Izby Kontroli (NIK). Zawarte w nich dane pokażą skalę problemu oraz zobrazują obecny model. W swojej pracy postaram pokazać się, iż ten model nie jest optymalny, tj. nie
+gwarantuje najszybszego dotarcia do pacjenta w możliwie krótkim czasie. Ponadto system w rozumieniu globalnym działa nierównomiernie, tzn. przy aktualnym gospodarowaniu karetkami w obszarze województwa może dojść do sytuacji, w której w przypadku gdy istnieje wzmożone zapotrzebowanie karetek w jednym województwie, karetki z innego województwa muszą być organizowane na drodze próśb o użyczenie, a nie są brane pod uwagę w momencie zaistnienia zgłoszenia. Dodatkowo należy wspomnieć, iż wykorzystywane mierniki skuteczności zespołów ratowniczych (czas dojazdu do poszkodowanego) niosą za sobą mało informacji.
+W swojej pracy będę chciał przedstawić nowy model organizacji karetek pogotowia, czyli taki nie wynikający z stricte z podziałów administracyjnych, a optymalny pod względem czasu i drogi dojazdu z punktu startowego do docelowego.
+W kolejnej części swojej pracy dyplomowej zawrę informację o algorytmach optymalizujących drogę. Przedstawione zostaną matematyczne modele oraz pseudokod pokazujący ich programistyczne rozwinięcie. Szczególna uwaga zostanie skupiona na czasie działania każdego algorytmu oraz stopniu trudności jego implementacji i złożoności obliczeniowej.
+
+\section{Zakres pracy}
+Rezultatem mojej pracy będzie program komputerowy, w którym owe algorytmy zostaną zaimplementowane. W celach badawczych możliwym będzie wybór, z którego algorytmu program ma w danej chwili korzystać, tj. wyznaczać drogę ze Szpitala do pacjenta. Przewiduje się, że program będzie pobierał dane o korkach drogowych z Internetu, co pozwoli uniknąć zatłoczonych dróg. Będzie to nieocenione dla kierowców. Należy zaznaczyć, iż proponowany program nie będzie jedynie kolejną aplikacją typu GPS, bowiem będzie posiadał zaimplementowaną listę punktów startowych (szpitali, miejsc organizacji karetek pogotowia) i w zależności od miejsca wezwania, sam wybierze z której stacji najlepiej wysłać pogotowie.
+Oprogramowanie wspierające symulację, obliczenia i prezentujące wyniki badań zostanie zaprogramowane w języku JAVA, przewiduję powstanie wersji graficznej programu w celu przejrzystej prezentacji badań oraz łatwego poruszania się po jego interfejsie.
+Zaimplementowane algorytmy będą porównywane przede wszystkim pod względem czasu pracy, przewidywanego czasu dojazdu karetki do pacjenta oraz długości trasy. Wyniki badań zostaną zapisane do plików w postaci danych tabelarycznych i wykresów. W celu łatwego porównania danej trasy wyniki badań dla każdego algorytmu przedstawione zostaną na jednym wykresie.
+Po procesie generowania danych i symulacji przeprowadzona zostanie dogłębna analiza mająca na celu wskazanie optymalnego rozwiązania lub wskazania tego rozwiązania, które na tle pozostałych jest wyjątkowo nieefektywne.
+\section{Wstęp}
+\section{Wstęp}
 
 
 
@@ -106,10 +122,22 @@ dr Wojciech \textsc{Kmiecik} % Supervisor's Name
 
 \begin{thebibliography}{99}
 \bibitem{pa} 
-=========================================
+Applegate, David L., “The traveling salesman problem : a computational study / David L. Applegate [et al.]”, Princeton ; Oxford : Princeton University Press, cop. 2006.
+\bibitem{pa} 
+Agnieszka JAKUBOWSKA, Katarzyna PIECHOCKA, „- WYBRANE ALGORYTMY W ZASTOSOWANIU DO PROBLEMU KOMIWOJAŻERA”, JOURNAL OF TRANSLOGISTICS 2015
+\bibitem{pa} 
+Ivan Brezina Jr., Zuzana Čičková, „Solving the Travelling Salesman Problem Using the Ant Colony Optimization”, Management Information Systems, Vol. 6 (2011), No. 4 pp. 010-014 Received 12 July 2010, Accepted 23 September 2011
+\bibitem{pa} 
+Neill E. Bowler, Thomas M. A. Fink, Robin C. Ball, “Characterization of the probabilistic traveling salesman problem”, June 13, 2003
+\bibitem{pa} 
+T.H. Cormen, Ch.E. Leiserson, R.L.Rivest, „Wprowadzenie do algorytmów”, Wyd. Naukowo-Techniczne Warszawa, 2001
+\bibitem{pa} 
+CHRIS WALSHAW, “A MULTILEVEL APPROACH TO THE TRAVELLING SALESMAN PROBLEM”, London, SE10 9LS, United Kingdom, (Received August 2000; revisions received May 2001, July 2001; accepted August 2001)
+\bibitem{pa} 
+Christian Blum, “Ant colony optimization: Introduction and recent trends”, ALBCOM, LSI, Universitat Politècnica de Catalunya, Jordi Girona 1-3, Campus Nord, 08034 Barcelona, Spain Accepted 11 October 2005
+\bibitem{pa} 
+Dweepna Garg and 2Saurabh Shah, „ANT COLONY OPTIMIZATION FOR SOLVING TRAVELING SALESMAN PROBLEM”, International Journal of Computer Science and System Analysis, Vol. 5, No. 1, January-June 2011
 
-\bibitem{pa}
-=========================================
 
 
 
