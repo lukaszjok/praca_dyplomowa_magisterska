@@ -144,10 +144,22 @@ W ramach systemu 112 mamy 16 wojewódzkich Centrów Powiadamiania Ratunkowego. S
 \begin{figure}[H]
   \centering
   \includegraphics[width=\columnwidth]{images/mapa_cpr.png}
-  \caption{Main program view }
+  \caption{Rozmieszczenie Centrów Powiadamiania Ratunkowego}
 \end{figure}
 
+\subsection{Funkcjonowanie Systemu Powiadamiania Ratunkowego}
 
+Osoba dzwoniąca pod ratunkowy numer 112, zgłaszając potrzebę wezwania pogotowia ratunkowego łączy się z dyspozytorem CPR. Ten posiada dedykowany system informatyczny na swoim stanowisku - w jego skład wchodzą specjalistyczne oprogramowanie zarządzające zebranymi danymi od osoby zgłaszającej wezwanie, dane o abonencie urządzenia z którego dzwoniący kontaktuje się z CPR oraz aplikację będącą platformą lokalizująco-infrmacjną. Dzięki takiemu wyposażeniu dyspozytor jest w stanie bardzo dokładnie zlokalizować osobę dzwoniącą - na mocy odpowiednich ustaw czas lokalizacji abonenta nie powinien przekroczyć 4 sekund. 
+% [sprawdzic jak to jest dokladnie]
+Zebrawszy wszystkie niezbędne informacje operator 112 przekazuje zdarzenie do odpowiedniego dyspozytora wybieranego w sposób arbitralny. Aktualnie nie funkcjonuje żaden system wspierający wybór optymalnej stacji pogotowia pod względem czasu i drogi dojazdu do poszkodowanego. Co więcej, dyspozytor wybiera w pierwszej kolejności stację pogotowia z danego województwa. Takie podejście może powodować, że czas dojazdu do wzywającego pomoc może znacząc się wydłużyć. W związku z taką sytuacją zaproponowane zostanie nowe podejście, które opisano poniżej.
+
+\subsection{Propozycja nowego rozwiązania}
+Chcąc zoptymalizować drogę i czas dojazdu karetki pogotowia należy zaimplementować rozwiązanie aplikacyjne działające już na etapie rejestracji zgłoszenia u operatora 112. W takiej sytuacji, w chwili przeprowadzania wstępnego wywiadu dotyczącego zaistniałego zdarzenia, oprogramowanie mogłoby wyznaczać optymalną trasę dojazdu do wzywającego pogotowie. Takie dane byłyby przekazane drogą elektroniczną do dyspozytora, który mógłby ewentualnie skorygować trasę, a w następstwie przekazać ją kierowcy karetki. Dane o dojeździe przekazywane byłyby w formie mapy graficznej, wiadomości tekstowej zawierającej wykaz kolejnych miejscowości i dróg lub głosowe wytyczne dyspozytora. 
+
+\subsection{Algorytm nowego podejścia}
+W rozwiązaniu proponowanym w pracy dyplomowej przewiduje się, że w chwili uzyskania informacji o położeniu poszkodowanego - operator 112 lub dyspozytor umieszcza takie dane w programie jako parametr wejściowy. Następnie aplikacja poszukuje najbliższej stacji pogotowia   badając promień odległości od miejsca zgłoszenia, zwiększając go o zadaną wartość(krok promienia poszukiwań), unikając tym samym barier administracyjnych. W kolejnym etapie, mając ustalony punkt startowy i końcowy - aplikacja wyznaczy optymalna tracę przejazdu karetki. W pracy dyplomowej badany będzie problem komiwojażera i różne algorytmy próbujące rozwiązać zagadnienie, szczegóły przedstawione zostaną w kolejnych punktach. Dodatkowo aplikacja będzie zbierała informacje o korkach drogowych - ta informacja będzie parametrem uwzględnianym w implementacji co pozwoli  na szybkie dotarcie do poszkodowanego.
+
+\subsection{Problem Komiwojażera}
 
 
 

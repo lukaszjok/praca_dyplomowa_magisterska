@@ -4,4 +4,8 @@
 \contentsline {section}{\numberline {4}Tematyka pracy dyplomowej - ETAP 3.}{3}
 \contentsline {subsection}{\numberline {4.1}Podstawowe Poj\IeC {\k e}cia}{3}
 \contentsline {subsection}{\numberline {4.2}Obecny model i architektura Centrum Powiadamiania Ratunkowego}{4}
-\contentsline {section}{\numberline {5}Wst\IeC {\k e}p}{5}
+\contentsline {subsection}{\numberline {4.3}Funkcjonowanie Systemu Powiadamiania Ratunkowego}{5}
+\contentsline {subsection}{\numberline {4.4}Propozycja nowego rozwi\IeC {\k a}zania}{6}
+\contentsline {subsection}{\numberline {4.5}Algorytm nowego podej\IeC {\'s}cia}{6}
+\contentsline {subsection}{\numberline {4.6}Problem Komiwoja\IeC {\.z}era}{6}
+\contentsline {section}{\numberline {5}Wst\IeC {\k e}p}{6}
