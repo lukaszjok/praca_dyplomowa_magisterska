@@ -1,6 +1,7 @@
 \contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{2}
 \contentsline {section}{\numberline {2}Cel pracy}{2}
 \contentsline {section}{\numberline {3}Zakres pracy}{3}
-\contentsline {section}{\numberline {4}Tematyka pracy dyplomowej}{3}
-\contentsline {subsection}{\numberline {4.1}Obecny model i architektura Centrum Powiadamiania Ratunkowego - Etap 3.}{3}
-\contentsline {section}{\numberline {5}Wst\IeC {\k e}p}{3}
+\contentsline {section}{\numberline {4}Tematyka pracy dyplomowej - ETAP 3.}{3}
+\contentsline {subsection}{\numberline {4.1}Podstawowe Poj\IeC {\k e}cia}{3}
+\contentsline {subsection}{\numberline {4.2}Obecny model i architektura Centrum Powiadamiania Ratunkowego}{4}
+\contentsline {section}{\numberline {5}Wst\IeC {\k e}p}{5}

@@ -38,6 +38,7 @@
 %\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
 
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -110,11 +111,46 @@ Rezultatem mojej pracy będzie program komputerowy, w którym owe algorytmy zost
 Oprogramowanie wspierające symulację, obliczenia i prezentujące wyniki badań zostanie zaprogramowane w języku JAVA, przewiduję powstanie wersji graficznej programu w celu przejrzystej prezentacji badań oraz łatwego poruszania się po jego interfejsie.
 Zaimplementowane algorytmy będą porównywane przede wszystkim pod względem czasu pracy, przewidywanego czasu dojazdu karetki do pacjenta oraz długości trasy. Wyniki badań zostaną zapisane do plików w postaci danych tabelarycznych i wykresów. W celu łatwego porównania danej trasy wyniki badań dla każdego algorytmu przedstawione zostaną na jednym wykresie.
 Po procesie generowania danych i symulacji przeprowadzona zostanie dogłębna analiza mająca na celu wskazanie optymalnego rozwiązania lub wskazania tego rozwiązania, które na tle pozostałych jest wyjątkowo nieefektywne.
-\section{Tematyka pracy dyplomowej}
+\section{Tematyka pracy dyplomowej - ETAP 3.}
 
-\subsection{Obecny model i architektura Centrum Powiadamiania Ratunkowego - Etap 3.}
+\subsection{Podstawowe Pojęcia}
 Tak jak zostało to zasygnalizowane we wstępie głównym celem tej pracy dyplomowej jest wypracowanie nowego modelu zarządzania karetkami pogotowia. Chcąc uczynić proponowane rozwiązanie możliwie najbardziej użytecznym, wygodnym i funkcjonalnym należy dokładnie przyjrzeć się aktualnie działającemu systemowi powiadamiania ratunkowego i jego architekturze. Jest to koniecznym ze względu na to, iż tylko w ten sposób można wychwycić jego wady, niedoskonałości, które mogą zostać poprawione.\\
+Chcąc dokładnie przedstawić aktualną architekturę, słowem wstępu, poniżej przedstawiono najważniejsze elementy systemu powiadamiania ratunkowego:
+\begin{itemize}
+\item 
+System 112 - 
+Poprzez pojęcie system 112 - jednolity krajowy system odbioru zgłoszeń nanumer alarmowy 112. System ten obejmuje sieć Centrów Powiadamiania Ratunkowego (CPR) - opisane poniżej.Z systemem
+współpracują: Policja, Państwowa Straż Pożarna oraz Pogotowie Ratunkowe, a także inne jednostki ratownicze, do których przekierowywane są zgłoszenia alarmowe, które potwierdzają podjęcie akcji ratowniczej lub innej interwencji. Dodatkowo z systemem współpracują publiczni operatorzy sieci telefonicznych oraz
+dostawcy ogólnodostępnych usług telekomunikacyjnych.
+\item 
 Centrum powiadamiania ratunkowego (skrót CPR, ang. public-safety answering point, PSAP) – jednolity system obsługujący zgłoszenia alarmowe kierowane do numerów alarmowych 112, 997, 998 i 999,który  umożliwia przekazanie zgłoszenia alarmowego do odpowiednich służb ratowniczych. 
+
+\item 
+Operator 112 - osoba pracująca w CPR, której zadaniem jest odbieranie zgłoszeń od dzwoniących na numer 112, a w następstwie przekazująca je do właściwych służb.
+\item 
+Dyspozytor - osoba, która dysponuje siłami i środkami pozwalającymi nieść pomoc poszkodowanym w strukturach Policji, Państwowej Straży Pożarnej, Pogotowia Ratunkowego.
+
+
+\end{itemize}
+Centrum powiadamiania ratunkowego (skrót CPR, ang. public-safety answering point, PSAP) – jednolity system obsługujący zgłoszenia alarmowe kierowane do numerów alarmowych 112, 997, 998 i 999,który  umożliwia przekazanie zgłoszenia alarmowego do odpowiednich służb ratowniczych. 
+
+\subsection{Obecny model i architektura Centrum Powiadamiania Ratunkowego}
+Aktualne podejście architektoniczne systemu jest podejściem scentralizowanym (choć posiada kilkanaście centrali - jednak połączonych między sobą i ściśle współpracujących), związane z podziałem administracyjnym Polski na województwa. Poszczególne Centra  Powiadamiania Ratunkowego są połączone ze sobą w sieć przy użyciu światłowodów, co pozwala na szybkie przesyłanie danych między tymi ośrodkami. Ponadto dysponują one
+% [przypis_duzo_info]
+% [potwierdzić informacje informatyczne]
+wyspecjalizowanymi serwerami, co jest szczególnie istotną informacją w kontekście tej pracy dyplomowej, gdyż pozwoli to na szybsze działanie proponowanej aplikacji. Platforma aplikacyjna wykorzystywana obecnie pozwala na przesyłanie danych między operatorami 112 a dyspozytorami, dzięki czemu rezultaty pracy aplikacji optymalizującej drogę i czas karetki pogotowia, będą mogły być przekazywane między poszczególnymi jednostkami w postaci plików.
+W ramach systemu 112 mamy 16 wojewódzkich Centrów Powiadamiania Ratunkowego. System kooperuje z Platformą Lokalizacyjno-Informacyjną, którą zarządza Urząd Komunikacji Elektronicznej. Poniżej pokazano rozmieszczenie oddziałów CPR na terenie Polski.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\columnwidth]{images/mapa_cpr.png}
+  \caption{Main program view }
+\end{figure}
+
+
+
+
+
 
 \section{Wstęp}
 
