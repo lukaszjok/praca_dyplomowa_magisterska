@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  8 DEC 2016 18:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  11 DEC 2016 20:32
 entering extended mode
 **./main.tex
 (main.tex
@@ -517,6 +517,15 @@ LaTeX Warning: Label `pa' multiply defined.
 
 LaTeX Warning: Label `pa' multiply defined.
 
+
+LaTeX Warning: Label `pa' multiply defined.
+
+
+LaTeX Warning: Label `pa' multiply defined.
+
+
+LaTeX Warning: Label `pa' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -654,17 +663,29 @@ LaTeX Font Info:    External font `plex10' loaded for size
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [1] [2] [3] [4] (main.aux)
+ [1] [2] [3]
+Underfull \hbox (badness 2662) in paragraph at lines 148--150
+[]\OT4/cmr/m/n/12 Encyklopedia In-ter-ne-to-wa - Wi-ki-pe-dia, ha-sªo: "Pa«-stw
+o-we Ra-tow-nic-two Me-dycz-ne",
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--153
+[]\OT4/cmr/m/n/12 Encyklopedia In-ter-ne-to-wa - Wi-ki-pe-dia, ha-sªo: "112 (nu
+-mer alar-mo-wy)",
+ []
+
+[4] (main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2805 strings out of 493335
- 36098 string characters out of 3145275
- 208616 words of memory out of 3000000
- 6282 multiletter control sequences out of 15000+200000
- 13208 words of font info for 36 fonts, out of 3000000 for 9000
+ 2807 strings out of 493335
+ 36133 string characters out of 3145275
+ 208617 words of memory out of 3000000
+ 6284 multiletter control sequences out of 15000+200000
+ 13712 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,4n,25p,759b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
 {d:/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/
@@ -672,7 +693,7 @@ plit.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<d:/MiKTeX 2.9/fonts/type1/
 public/pl/plbx12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><d:/MiKTe
 X 2.9/fonts/type1/public/pl/plr12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plti
 12.pfb>
-Output written on main.pdf (5 pages, 53406 bytes).
+Output written on main.pdf (5 pages, 55720 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
