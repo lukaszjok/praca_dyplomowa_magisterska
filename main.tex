@@ -160,18 +160,130 @@ Chcąc zoptymalizować drogę i czas dojazdu karetki pogotowia należy zaimpleme
 W rozwiązaniu proponowanym w pracy dyplomowej przewiduje się, że w chwili uzyskania informacji o położeniu poszkodowanego - operator 112 lub dyspozytor umieszcza takie dane w programie jako parametr wejściowy. Następnie aplikacja poszukuje najbliższej stacji pogotowia   badając promień odległości od miejsca zgłoszenia, zwiększając go o zadaną wartość(krok promienia poszukiwań), unikając tym samym barier administracyjnych. W kolejnym etapie, mając ustalony punkt startowy i końcowy - aplikacja wyznaczy optymalna tracę przejazdu karetki. W pracy dyplomowej badany będzie problem komiwojażera i różne algorytmy próbujące rozwiązać zagadnienie, szczegóły przedstawione zostaną w kolejnych punktach. Dodatkowo aplikacja będzie zbierała informacje o korkach drogowych - ta informacja będzie parametrem uwzględnianym w implementacji co pozwoli  na szybkie dotarcie do poszkodowanego.
 
 \subsection{Problem Komiwojażera}
+%[kopiuj/wkliej :)] - do poprawy - wikipedia
+Problem komiwojażera (ang. travelling salesman problem, TSP) – zagadnienie optymalizacyjne, polegające na znalezieniu minimalnego cyklu Hamiltona w pełnym grafie ważonym.
+Nazwa pochodzi od typowej ilustracji problemu, przedstawiającej go z punktu widzenia wędrownego sprzedawcy (komiwojażera): dane jest n miast, które komiwojażer ma odwiedzić, oraz odległość / cena podróży / czas podróży pomiędzy każdą parą miast. Celem jest znalezienie najkrótszej / najtańszej / najszybszej drogi łączącej wszystkie miasta, zaczynającej się i kończącej się w określonym punkcie.
+Symetryczny problem komiwojażera (STSP) polega na tym, że dla dowolnych miast A i B odległość z A do B jest taka sama jak z B do A. W asymetrycznym problemie komiwojażera (ATSP) odległości te mogą być różne.
+Rozwinięciem problemu komiwojażera jest problem marszrutyzacji.\\
+
+%[kopiuj/wkliej :)] - do poprawy - wikipedia
+Problem marszrutyzacji - problem decyzyjny polegający na wyznaczeniu optymalnych tras przewozowych dla pewnej ściśle określonej liczby środków transportu, której zadaniem jest obsłużenie zbioru klientów znajdujących się w różnych punktach przy zachowaniu ograniczeń. Kryterium optymalizacji jest całkowity koszt transportu (wyrażony odległościowo, cenowo lub czasowo). Istnieją również rozwinięcia problemu uwzględniające więcej, niż jedno kryterium optymalizacji. Problem marszrutyzacji należy do podstawowej problematyki zarządzania operacyjnego flotą środków transportu (rzadziej zarządzania na wyższym szczeblu).
 
 
 
 
-\section{Wstęp}
+\subsubsection{Algorytm mrówkowy}
+%[kopiuj/wkliej :)] - do poprawy
+Mrówki są owadami żyjącymi w koloniach, ich przezycie jest uzależnione od wspólnego działania. Ich misja jest budowa mrowiska oraz
+poszukiwanie pożywienia. Pojedynczy osobnik nie jest w stanie tego dokonać, dopiero w grupie mrówki mogą wykazać się swoja inteligencja.
+Aby przeżyć, niezbędna jest współpraca miedzy wszystkimi jednostkami
+kolonii. Mrówki wykazują złożone zachowania społeczne, które od dawna przyciągają uwagę człowieka. W dzieciństwie z pewnoscia wiele osób usiłowało utrudnić mrówkom „prace” poprzez umieszczenie jakiejś przeszkody na ich drodze, aby sprawdzić ich reakcje na takie zaburzenie. Można w ten sposób zauważyć, ze owady te bez problemu radzą sobie w takich sytuacjach . Początkowo ich ruch jest chaotyczny, jednak z czasem wypracowują one najkrótsza droge. Jak to sie dzieje? Mianowicie odbywa się to za sprawa komunikacji za pomocą feromonów, czyli związków infochemicznych pozostawianych w środowisku. Mrówki wędrując w poszukiwaniu pożywienia wybierają losowe trasy.
+Kiedy jedna z nich znajdzie pokarm, wracając z nim do mrowiska
+na całej ścieżce wydziela feromon. Kolejne mrówki, dzięki zdolności wyczuwania tych feromonów podążają droga, która przeszło najwięcej jej
+towarzyszy, również zostawiając ślad po sobie. Gdy na drodze pojawi sie przeszkoda, mrówki muszą wybrać pomiędzy skrętem w prawo lub
+w lewo, przy czym prawdopodobieństwo wyboru jednej z tych opcji jest
+jednakowe. Osobniki, które przypadkowo wybierają krótsza ścieżkę,
+utrwalaja na niej slad feromonowy (mniej feromonu zdarzyło odparować,
+podczas gdy szybciej wyparowuje on na ścieżce dłuższej). Innymi słowy,
+feromon szybciej osadza sie na krótszej drodze. W rezultacie,
+wszystkie mrówki wybieraja krótsza trasę, ponieważ podążając szlakiem
+zapachowym w kierunku pożywienia, dokładają również swój feromon
+do już istniejącego. Poziom zapachu na tej drodze staje sie tak wysoki,
+ze podażą nią cała kolonia. Feromony z czasem wyparowują, tracąc
+swa intensywnosc, dlatego gdy źródło pożywienia sie wyczerpie, ścieżka
+znika.
+
+\subsubsection{Algorytm genetyczny}
+Inspiracja do powstania algorytmu genetycznego była natura i zachodzące
+w niej zjawiska. Algorytm ten do poszukiwania optymalnych
+rozwiązań naśladuje naturalne procesy związane z ewolucja, takie jak
+dziedziczenie genetyczne. Wszystkie organizmy żywe żyją w stale zmieniającym
+się świecie, cześć z nich jest lepiej przystosowana do danego
+środowiska, cześć gorzej. Organizmy radzące sobie lepiej maja większą
+szanse na przeżycie. Przykładem moze tu byc kot polujacy na myszy.
+Szybki, zwinny i sprytny kot szybciej upoluje mysz, anizeli wolny, niezdarny.
+Stad ten pierwszy ma większe szanse na przeżycie, a także przekazanie
+swoich „lepszych” genów kolejnym pokoleniom. Oczywiście czesc
+wolnych kotów tez przezyje, wprowadzając mieszaninę materiału genetycznego.
+Jednak w naturalny sposób, cała populacja w procesie ewolucji
+dąży do ulepszenia, organizmy „lepsze” reprodukują się, a „gorsze” wymierają.
+Opisana zależność wykorzystywana jest w działaniu algorytmów
+genetycznych
+\section{Opracowanie pracy magisterskiej}
+
+Przygotowując się do redakcji pracy magisterskiej ustalone zostały niniejsze fakty, które spisano w kolejnych podpunktach.
+
+\subsection{Aspekt Badawczy}
+Analiza właściwości i charakterystyk zaproponowanych algorytmów służących do rozwiązania rozważanego problemu optymalizacyjnego na podstawie wyników otrzymanych przy wykorzystaniu zaimplementowanego systemu symulacyjnego. Rekomendacje związane z zastosowaniem zaproponowanych rozwiązań w rzeczywistych warunkach oraz propozycje dalszych kierunków badań.
+
+\subsection{Aspekt Inżynierski}
+Projekt i implementacja zaproponowanych algorytmów związanych z problemem wyznaczania optymalnej drogi przejazdu pojazdu karetki pogotowia do poszkodowanego. Implementacja systemu służącego do przeprowadzenia niezbędnych badań symulacyjnych.
+
+\subsection{Spis treści pracy dyplomowej}
+
+\begin{enumerate}
+\item Wstęp\\
+W tym rozdziale omówione zostaną cel, motywacja i ogólny zarys problemu. Nakreślony zostanie zakres pracy dyplomowej.
+
+\item Podstawowe pojęcia, nazewnictwo.\\
+W tym miejscu przybliżona i omówiona będzie semantyka słów, zwrotów i pojęć wykorzystywanych w obszarze optymalizacji i samego pogotowia ratunkowego.
+
+\item Bieżąca sytuacja.\\
+Tutaj zawarte zostaną informacje pokazującą sytuację bieżącą poruszanego zagadnienia w przestrzeni życia publicznego. Zaprezentowane zostaną zalety i uwypuklone zostaną wady, by w rezultacie pokazać sposób ich eliminacji.
+
+\item Matematyczne sformułowanie problemu.\\
+Jak sam tytuł wskazuje, rozdział ten poruszy zagadnienia matematyczne. Wskazany zostanie model matematyczny - opisywany przed odpowiednie wzory i algorytmy.
+
+\item Przegląd literaturowy dostępnych rozwiązań dla omawianego problemu optymalizacyjnego.\\
+W tym miejscu wskazany zostanie przegląd literaturowy pozycji, który zawarty będzie w bibliografii. 
+
+\item Projekt oraz implementacja zaproponowanych algorytmów rozwiązujących problem optymalizacyjny.\\
+Ten rozdział będzie zawierał opis podejścia programistycznego, zastosowane technologie i metodykę programowania. Za pomocą schematu blokowego UML zostanie pokazana architektura oprogramowania i zachodzące w niej przepływy danych/informacji i wzajemne zależności pomiędzy odpowiednimi blokami zadaniowymi.
+
+\item Implementacja systemu symulacyjnego.\\
+W tej części pracy dyplomowej spisane zostanie sprawozdanie z wykonanego środowiska testowego wraz z graficznym wskazaniem dostępych funkcji.
+
+\item Sformułowanie scenariuszy testowych dla zaproponowanych algorytmów.\\
+Podpunkt ten odnosił będzie się do scenariuszy testowych środowiska symulacyjnego i testowego. Zostaną sporządzone scenariusze badań, możliwe poprzez udostępnienie możliwości zmiany parametrów środowiska badawczego. Według tych scenariuszy przeprowadzane będą późniejsze badania.
+
+\item Przeprowadzenie badań i analiza otrzymanych rezultatów.\\
+Dział ten będzie jedną z ważniejszych części pracy dyplomowej. Otrzymane wyniki ze środowiska badawczego zostaną przestawione w postaci tabelarycznej, wstawione zostaną wykresy oraz ich opisy.
+
+\item Wnioski oraz propozycje dalszych kierunków badań.
+W tej części wysnute zostaną wnioski wysnute na podstawie przeprowadzanych doświadczeń, badań. To także miejsce na podsumowanie i końcowe refleksje.
+\end{enumerate}
+
+\newpage
+\section{Wykres Gantta}
+Poniżej został przedstawiony wykres Gantta, który będzie wyznacznikiem, punktem odniesienia w pracy nad pracą dyplomową.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{images/g1.png}
+  \caption{Wykres Gantta część 1.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{images/g2.png}
+  \caption{Wykres Gantta część 2.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{images/g3.png}
+  \caption{Wykres Gantta część 3.}
+\end{figure}
+
 
 
 
 \newpage
+
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
+\section{Bibliografia}
 
 \begin{thebibliography}{99}
 \bibitem{pa} 

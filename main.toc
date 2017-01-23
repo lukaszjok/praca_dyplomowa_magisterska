@@ -8,4 +8,11 @@
 \contentsline {subsection}{\numberline {4.4}Propozycja nowego rozwi\IeC {\k a}zania}{6}
 \contentsline {subsection}{\numberline {4.5}Algorytm nowego podej\IeC {\'s}cia}{6}
 \contentsline {subsection}{\numberline {4.6}Problem Komiwoja\IeC {\.z}era}{6}
-\contentsline {section}{\numberline {5}Wst\IeC {\k e}p}{6}
+\contentsline {subsubsection}{\numberline {4.6.1}Algorytm mr\IeC {\'o}wkowy}{7}
+\contentsline {subsubsection}{\numberline {4.6.2}Algorytm genetyczny}{7}
+\contentsline {section}{\numberline {5}Opracowanie pracy magisterskiej}{8}
+\contentsline {subsection}{\numberline {5.1}Aspekt Badawczy}{8}
+\contentsline {subsection}{\numberline {5.2}Aspekt In\IeC {\.z}ynierski}{8}
+\contentsline {subsection}{\numberline {5.3}Spis tre\IeC {\'s}ci pracy dyplomowej}{8}
+\contentsline {section}{\numberline {6}Wykres Gantta}{10}
+\contentsline {section}{\numberline {7}Bibliografia}{13}

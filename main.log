@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  11 DEC 2016 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.8)  23 JAN 2017 04:04
 entering extended mode
 **./main.tex
 (main.tex
@@ -684,39 +684,62 @@ File: images/mapa_cpr.png Graphic file (type png)
 <use images/mapa_cpr.png>
 Package pdftex.def Info: images/mapa_cpr.png used on input line 146.
 (pdftex.def)             Requested size: 500.484pt x 483.25784pt.
- [4] [5 <./images/mapa_cpr.png>] [6]
-Underfull \hbox (badness 2662) in paragraph at lines 196--198
+ [4] [5 <./images/mapa_cpr.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 164--168
+
+ []
+
+[6] [7] [8] [9] <images/g1.png, id=39, 482.40225pt x 1145.4795pt>
+File: images/g1.png Graphic file (type png)
+
+<use images/g1.png>
+Package pdftex.def Info: images/g1.png used on input line 262.
+(pdftex.def)             Requested size: 241.20053pt x 572.73836pt.
+ <images/g2.png, id=41, 476.982pt x 1143.67274pt>
+File: images/g2.png Graphic file (type png)
+
+<use images/g2.png>
+Package pdftex.def Info: images/g2.png used on input line 268.
+(pdftex.def)             Requested size: 238.4904pt x 571.83498pt.
+ [10 <./images/g1.png>]
+<images/g3.png, id=46, 481.19775pt x 1140.05925pt>
+File: images/g3.png Graphic file (type png)
+ <use images/g3.png>
+Package pdftex.def Info: images/g3.png used on input line 274.
+(pdftex.def)             Requested size: 240.59828pt x 570.02823pt.
+ [11 <./images/g2.png>] [12 <./images/g3.png>]
+Underfull \hbox (badness 2662) in paragraph at lines 308--310
 []\OT4/cmr/m/n/12 Encyklopedia In-ter-ne-to-wa - Wi-ki-pe-dia, ha-sªo: "Pa«-stw
 o-we Ra-tow-nic-two Me-dycz-ne",
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--201
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
 []\OT4/cmr/m/n/12 Encyklopedia In-ter-ne-to-wa - Wi-ki-pe-dia, ha-sªo: "112 (nu
 -mer alar-mo-wy)",
  []
 
-[7] (main.aux)
+[13] (main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2835 strings out of 493335
- 36557 string characters out of 3145275
+ 2850 strings out of 493335
+ 36788 string characters out of 3145275
  208617 words of memory out of 3000000
- 6306 multiletter control sequences out of 15000+200000
+ 6318 multiletter control sequences out of 15000+200000
  13969 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,5n,25p,941b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,6n,25p,941b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
 {d:/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/
 plit.enc}{d:/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<d:/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><
 d:/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><d:/MiKTeX 2.9/fonts/type1/publ
 ic/pl/plr12.pfb><d:/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on main.pdf (8 pages, 1098237 bytes).
+Output written on main.pdf (14 pages, 1311523 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
